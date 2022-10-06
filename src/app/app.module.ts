@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FourofourComponent } from './shared/fourofour/fourofour.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FourofourComponent } from './shared/fourofour/fourofour.component';
     HomeComponent,
     AboutComponent,
     FourofourComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
