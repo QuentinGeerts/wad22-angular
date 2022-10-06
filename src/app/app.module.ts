@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FourofourComponent } from './shared/fourofour/fourofour.component';
 import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
