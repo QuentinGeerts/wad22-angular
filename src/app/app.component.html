@@ -1,13 +1,18 @@
 <!-- Navigation -->
-
 <nav>
     <ul>
         <li><a routerLink="home">Accueil</a></li>
         <li><a routerLink="about">A propos</a></li>
         <li>
-            <a routerLink="demos">Demo</a>
+            <a routerLink="demos">Démonstrations</a>
             <ul>
                 <li><a routerLink="demos/demo1">Demo 1</a></li>
+            </ul>
+        </li>
+        <li>
+            <a routerLink="exos">Exercices</a>
+            <ul>
+                <li><a routerLink="exos/exo1">Exo 1</a></li>
             </ul>
         </li>
     </ul>
@@ -16,7 +21,8 @@
 <!-- Content -->
 <!-- <app-home></app-home> -->
 <!-- <app-about></app-about> -->
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
 
 <!-- Footer -->
