@@ -1,11 +1,14 @@
-<!-- Navigation -->
-<app-nav></app-nav>
+<div class="app">
+    <!-- Navigation -->
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+    <!-- Content -->
+    <!-- <app-home></app-home> -->
+    <!-- <app-about></app-about> -->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
 
-<!-- Content -->
-<!-- <app-home></app-home> -->
-<!-- <app-about></app-about> -->
-<div class="container-fluid">
-    <router-outlet></router-outlet>
+    <!-- Footer -->
 </div>
-
-<!-- Footer -->

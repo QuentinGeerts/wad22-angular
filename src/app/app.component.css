@@ -1,0 +1,7 @@
+.app {
+    display: flex;
+}
+
+.nav {
+    margin-right: 10px;
+}
