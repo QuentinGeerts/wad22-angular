@@ -29,4 +29,9 @@ export class Demo3Component implements OnInit {
     this.texte = (event.target as HTMLInputElement).value;
   }
 
+  // changeValue (event: any): void {
+  //   // console.log((event.target as HTMLInputElement).value);
+  //   this.texte = event.target.value;
+  // }
+
 }
