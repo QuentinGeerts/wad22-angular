@@ -8,6 +8,8 @@ import { Demo2Component } from './components/demo2/demo2.component';
 import { FormsModule } from '@angular/forms';
 import { Demo3Component } from './components/demo3/demo3.component';
 import { Demo4Component } from './components/demo4/demo4.component';
+import { Demo5Component } from './components/demo5/demo5.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { Demo4Component } from './components/demo4/demo4.component';
     Demo1Component,
     Demo2Component,
     Demo3Component,
-    Demo4Component
+    Demo4Component,
+    Demo5Component
   ],
   imports: [
     CommonModule,
     DemosRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class DemosModule { }

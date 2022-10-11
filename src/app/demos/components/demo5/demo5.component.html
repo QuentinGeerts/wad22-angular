@@ -1,0 +1,52 @@
+<h2>Demo 5 : Les Pipes</h2>
+
+<p>Permet de formater une propriété dans un format particulier.</p>
+
+<h3>Chaine de caractères</h3>
+<p>Par défaut : {{ maVar1 }}</p>
+<p>Uppercase : {{ maVar1 | uppercase }}</p>
+<p>Lowercase : {{ maVar1 | lowercase }}</p>
+<p>Titlecase : {{ maVar1 | titlecase }}</p>
+
+<br>
+
+<h3>Nombres</h3>
+<p>DecimalPipe (par défaut) : {{ maVar2 | number }}</p>
+<p>DecimalPipe (options): {{ maVar2 | number : '4.1-5' }}</p>
+<p>CurrencyPipe : {{ maVar2 | currency }}</p>
+<p>CurrencyPipe : {{ maVar2 | currency : 'EUR' }}</p>
+
+<br>
+
+<h3>Pourcentage</h3>
+<p>PercentPipe : {{ maVar4 | percent }}</p>
+<p>PercentPipe : {{ maVar4 | percent : '2.1-4'}}</p>
+
+<br>
+
+<h3>Date</h3>
+<p>DatePipe : {{ maVar3 }}</p>
+<p>DatePipe : {{ maVar3 | date }}</p>
+<p>DatePipe : {{ maVar3 | date : 'dd/MM/YYYY' }}</p>
+<p>DatePipe : {{ maVar3 | date : 'dd-MM-YYYY' }}</p>
+<p>DatePipe : {{ maVar3 | date : 'dd MMMM YYYY' : '' : '' }}</p>
+
+<br>
+
+<h3>JSON</h3>
+<p>JsonPipe : {{ maVar5 }}</p>
+<p>JsonPipe : {{ maVar5.lastname }}</p>
+<p>JsonPipe : {{ maVar5.firstname }}</p>
+<p>JsonPipe : {{ maVar5.birthdate }}</p>
+<p>JsonPipe : {{ maVar5 | json }}</p>
+
+<br>
+
+<h3>Conversion température :</h3>
+<p>{{ maVar6 }}° C donne {{ maVar6 | toFahrenheit }}° F</p>
+
+<br>
+
+<p>{{ maVar6 }}° C donne {{ maVar6 | temperature }}° C</p>
+<p>{{ maVar6 }}° C donne {{ maVar6 | temperature : 'f' }}° F</p>
+<p>{{ maVar7 }}° F donne {{ maVar7 | temperature : 'c' }}° C</p>
