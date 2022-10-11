@@ -2,3 +2,6 @@
 
 <p>Valeur de la variable : {{ variable }}</p>
 <button (click)="maMethode('Bonjour les WAD22 ! 🙂')">Clique sur moi pour changer le contenu</button>
+
+<p>Valeur de la variable : {{ texte }}</p>
+<input type="text" (keyup)="changeValue($event)" [value]="texte">
