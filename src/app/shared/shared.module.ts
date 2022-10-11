@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ToFahrenheitPipe } from './to-fahrenheit.pipe';
 import { FourofourComponent } from './fourofour/fourofour.component';
 import { TemperaturePipe } from './pipes/temperature.pipe';
+import { ToTimePipe } from './pipes/to-time.pipe';
 
 
 
@@ -11,6 +12,7 @@ import { TemperaturePipe } from './pipes/temperature.pipe';
     FourofourComponent,
     ToFahrenheitPipe,
     TemperaturePipe,
+    ToTimePipe,
   ],
   imports: [
     CommonModule
@@ -19,6 +21,7 @@ import { TemperaturePipe } from './pipes/temperature.pipe';
   exports: [
     ToFahrenheitPipe,
     TemperaturePipe,
+    ToTimePipe,
   ]
 })
 export class SharedModule { }

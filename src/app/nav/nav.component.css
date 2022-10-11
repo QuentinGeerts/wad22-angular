@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none;
+
+}
+
+ul li {
+    padding: 5px 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover{
+    color: magenta;
+}
+
+ul li a.activeRoute {
+    color: magenta;
+}
