@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Demo2Component implements OnInit {
 
-  inputValue!: string
+  inputValue: string = "Valeur par défaut";
+  numberValue!: number;
+  bool!: boolean;
 
-  constructor() { }
+  constructor () { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
+    this.numberValue = 42;
+    this.bool = false;
   }
 
 }
