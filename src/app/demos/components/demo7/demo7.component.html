@@ -1,0 +1,95 @@
+<h3>Demo 7 : Structural Directive</h3>
+
+<hr>
+
+<h4>NgIf</h4>
+
+<div (click)="toggle()">
+    <p style="cursor: pointer;">
+        Clique sur moi ({{ isToggled }})
+    </p>
+</div>
+
+<!-- SI le booléen est vrai ALORS on affiche la div SINON rien -->
+<div *ngIf="isToggled">
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit itaque eligendi vitae recusandae obcaecati
+            nihil,
+            temporibus autem eveniet iure, reiciendis ea quae doloribus corporis molestias enim perspiciatis porro
+            harum.
+            Maiores?
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<!-- SI le booléen est vrai ALORS on affiche la div et son contenu -->
+<!-- SINON on affiche la div et le contenu du elseblock -->
+<div *ngIf="isToggled;else elseblock">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum quia magni maxime repellendus laudantium
+        distinctio fugit quo esse accusamus quidem voluptatem, corrupti id aliquid hic vel quisquam soluta fugiat.
+    </p>
+</div>
+
+<ng-template #elseblock>
+    <div>
+        <p>Autre contenu : 😅</p>
+    </div>
+</ng-template>
+
+<hr>
+
+<!-- SI le booléen est vrai ALORS  -->
+<!-- on affiche la div avec le contenu du then block -->
+<!-- SINON on affiche la div avec le contenu du else block -->
+<div *ngIf="isToggled; then thenblock2 else elseblock2"></div>
+<ng-template #thenblock2>
+    <div>
+        <p>Dans le cas du thenblock</p>
+    </div>
+</ng-template>
+<ng-template #elseblock2>
+    <div>
+        <p>Dans le cas du elseblock</p>
+    </div>
+</ng-template>
+
+<hr>
+
+<h4>NgFor</h4>
+
+<br>
+
+<ul>
+    <li *ngFor="let fruit of liste; let i = index; let pair = even">
+        <span [ngClass]="{bgred: pair}">{{ i }} - {{ fruit }}</span>
+    </li>
+</ul>
+
+<table>
+    <tr 
+        *ngFor="let student of students; let i = index; let pair = even" 
+        [ngClass]="{bgred: pair}"
+    >
+        <td>{{ student.firstname }}</td>
+        <td>{{ student.lastname }}</td>
+    </tr>
+</table>
+
+<hr>
+
+<h4>NgSwitch</h4>
+
+<br>
+
+<input type="text" [(ngModel)]="inputValue">
+
+<div [ngSwitch]="inputValue">
+    <p *ngSwitchCase="1">Pomme</p>
+    <p *ngSwitchCase="2">Poire</p>
+    <p *ngSwitchCase="3">Pêche</p>
+    <p *ngSwitchDefault>Entrez 1, 2 ou 3</p>
+</div>
