@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { FakeauthService } from '../demos/services/fakeauth.service';
+import { FakeauthService } from '../../services/fakeauth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-demo9',
+  templateUrl: './demo9.component.html',
+  styleUrls: ['./demo9.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class Demo9Component implements OnInit, OnDestroy {
 
-  state!: boolean;
+  isConnected!: boolean;
   serviceSub!: Subscription;
 
   constructor (
@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit (): void {
-    this.state = this._AuthService.isConnected;
+    this.isConnected = this._AuthService.isConnected;
     this.serviceSub = this._AuthService.stateSubject.subscribe({
-      next: (state: boolean) => this.state = state
+      next: (state: boolean) => this.isConnected = state
     })
   }
 
@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   login () {
     this._AuthService.connect();
-    this.state = this._AuthService.isConnected;
+    this.isConnected = this._AuthService.isConnected;
   }
 
   logout () {
     this._AuthService.disconnect();
-    this.state = this._AuthService.isConnected;
+    this.isConnected = this._AuthService.isConnected;
   }
 
 }

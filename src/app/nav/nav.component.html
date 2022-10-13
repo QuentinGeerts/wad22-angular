@@ -23,14 +23,22 @@
     </ul>
 </nav> -->
 
+
+
 <nav>
+    <ul>
+        <li>{{ isAuth ? "Connecté" : "Déconnecté" }}</li>
+
+        <button (click)="login()" *ngIf="!isAuth">Connexion</button>
+        <button (click)="logout()" *ngIf="isAuth">Déconnexion</button>
+    </ul>
     <ul>
         <li *ngFor="let lien of liens; let i = index">
             <span *ngIf="lien.children" (click)="toggleVisible(i)" style="cursor: pointer;">
                 <span *ngIf="!lien.isVisible; else elseblock">⮞</span>
                 <ng-template #elseblock>⮟</ng-template>
             </span>
-            
+
             <a [routerLink]="lien.url" (click)="toggleVisible(i)" routerLinkActive="activeRoute"
                 [ngClass]="{master: lien.children}">
                 {{ lien.title }}

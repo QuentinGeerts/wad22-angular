@@ -1,0 +1,6 @@
+<h3>Demo 9 : Services et injection</h3>
+
+<p>Status : {{ isConnected ? "Connecté" : "Déconnecté" }}</p>
+
+<button (click)="login()" *ngIf="!isConnected">Connexion</button>
+<button (click)="logout()" *ngIf="isConnected">Déconnexion</button>
