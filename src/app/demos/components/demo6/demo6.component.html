@@ -1,8 +1,8 @@
 <h2>Demo 6 : Component Directives</h2>
 
-<h3>NgStyle</h3>
+<h3>NgStyle 😀</h3>
 
-<p [ngStyle]="currentStyle">
+<p [ngStyle]="currentStyle" appHighlight>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis nam cum dolore quae qui deleniti totam esse consequuntur et? Voluptas praesentium et cumque molestiae labore quos. At, doloremque eveniet!
 </p>
 
@@ -10,3 +10,13 @@
 <button (click)="switchBold()">Bold</button> &nbsp;
 <button (click)="switchSize()">Size</button>
 
+<hr>
+
+<h3>NgClass</h3>
+
+<p [ngClass]="{ maClasse: isActive, bold: isBold }">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias natus, adipisci iste amet, non odit aspernatur, itaque architecto ad vitae ullam quo. Ullam culpa sint fugiat. Deserunt, hic cupiditate.
+</p>
+
+<button (click)="switchClass()">Appliquer la classe ".maClasse"</button> &nbsp;
+<button (click)="switchClassBold()">Appliquer la classe ".bold"</button>

@@ -13,12 +13,18 @@ export class Demo6Component implements OnInit {
   bold!: boolean;
   size!: boolean;
 
+  isActive!: boolean;
+  isBold!: boolean;
+
   constructor () { }
 
   ngOnInit (): void {
     this.italic = false;
     this.bold = false;
     this.size = false;
+
+    this.isActive = false;
+    this.isBold = false;
 
     this.setCurrentStyle();
   }
@@ -46,5 +52,12 @@ export class Demo6Component implements OnInit {
     this.setCurrentStyle();
   }
 
+  switchClass () {
+    this.isActive = !this.isActive;
+  }
+
+  switchClassBold() {
+    this.isBold = !this.isBold;
+  }
 
 }
