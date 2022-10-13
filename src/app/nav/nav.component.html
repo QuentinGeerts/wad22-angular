@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <ul>
         <li><a routerLink="home" routerLinkActive="activeRoute">Accueil</a></li>
         <li><a routerLink="about" routerLinkActive="activeRoute">A propos</a></li>
@@ -19,6 +19,33 @@
             <ul>
                 <li><a routerLink="exos/exo1" routerLinkActive="activeRoute">Exo 1</a></li>
             </ul>
+        </li>
+    </ul>
+</nav> -->
+
+<nav>
+    <ul>
+        <li *ngFor="let lien of liens; let i = index">
+            <a 
+                [routerLink]="lien.url"
+                (click)="toggleVisible(i)"
+                routerLinkActive="activeRoute"
+                [ngClass]="{master: lien.children}"
+            >
+                {{ lien.title }}
+            </a>
+
+            <ul *ngIf="lien.children && lien.isVisible">
+                <li *ngFor="let enfant of lien.children; let i = index">
+                    <a 
+                        [routerLink]="enfant.url"
+                        routerLinkActive="activeRoute"
+                    >
+                        {{ i + 1 }} - {{ enfant.title }}
+                    </a>
+                </li>
+            </ul>
+
         </li>
     </ul>
 </nav>

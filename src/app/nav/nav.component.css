@@ -1,10 +1,13 @@
 ul {
     list-style-type: none;
-
+    transform: translateX(-15px);
+    /* width: 105%; */
+    /* border: 1px solid black; */
 }
 
 ul li {
-    padding: 5px 10px;
+    padding: 5px 0px;
+    width: 100%;
 }
 
 ul li a {
@@ -18,4 +21,8 @@ ul li a:hover{
 
 ul li a.activeRoute {
     color: magenta;
+}
+
+.master {
+    font-weight: bolder;
 }

@@ -11,8 +11,8 @@
 }
 
 .nav {
-    margin-right: 10px;
-    width: 15%;
+    margin-right: 0px;
+    width: 20%;
     position: absolute;
     left: 0;
     top: 100px;
@@ -23,7 +23,7 @@
 .content {
     position: absolute;
     top: 100px;
-    left: 15%;
+    left: 20%;
     padding: 20px;
     width: 80%;
 }
