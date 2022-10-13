@@ -1,0 +1,21 @@
+<div class="content">
+
+    <h4>{{ title }}</h4>
+
+    <p>
+        {{ messageFromParent }}
+    </p>
+
+    <button (click)="maMethode('Coucou !')">
+        Envoyer "Coucou" au parent
+    </button>
+
+    <button (click)="maMethode('Dernier jour d\'Angular !!!')">
+        Envoyer "Dernier jour d'Angular !!!" au parent
+    </button>
+
+    <hr>
+
+    <ng-content></ng-content>
+
+</div>

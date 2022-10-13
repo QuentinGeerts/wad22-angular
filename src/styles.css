@@ -3,3 +3,7 @@
 h2, h3, h4, h5, h6 {
     padding-bottom: 15px;
 }
+
+.content {
+    border: 1px solid black;
+}

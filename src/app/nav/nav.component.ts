@@ -25,6 +25,7 @@ export class NavComponent implements OnInit {
           { title: 'Les Pipes', url: 'demos/demo5' },
           { title: 'Component Directives', url: 'demos/demo6' },
           { title: 'Structural Directives', url: 'demos/demo7' },
+          { title: '@Input / @Output', url: 'demos/demo8' },
         ]
       },
       {
