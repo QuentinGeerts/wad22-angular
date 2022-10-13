@@ -32,7 +32,6 @@ import { EnfantComponent } from './components/demo8/enfant/enfant.component';
   imports: [
     CommonModule,
     DemosRoutingModule,
-    FormsModule,
     SharedModule
   ]
 })

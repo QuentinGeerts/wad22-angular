@@ -5,6 +5,7 @@ import { FourofourComponent } from './fourofour/fourofour.component';
 import { TemperaturePipe } from './pipes/temperature.pipe';
 import { ToTimePipe } from './pipes/to-time.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,14 +18,16 @@ import { HighlightDirective } from './directives/highlight.directive';
     HighlightDirective,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
 
   exports: [
     ToFahrenheitPipe,
     TemperaturePipe,
     ToTimePipe,
-    HighlightDirective
+    HighlightDirective,
+    FormsModule
   ]
 })
 export class SharedModule { }

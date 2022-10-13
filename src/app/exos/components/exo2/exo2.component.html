@@ -1,0 +1,16 @@
+<h3>Shopping List</h3>
+
+<p>Mettre en place une shopping list en deux composant.</p>
+<p>Dans le premier, un champ texte permettant l’ajout d’un article à la liste</p>
+<p>Dans le deuxième, l’affichage de la liste et la possibilité de supprimer un article.</p>
+<p>Les deux composant doivent être afficher sur la même page</p>
+
+<hr>
+
+<h4>Liste des cours</h4>
+
+<input type="text" [(ngModel)]="article">
+<button (click)="addToCart()">Ajouter</button>
+
+<br>
+<app-liste [panier]="liste" (delete)="removeToCart($event)"></app-liste>

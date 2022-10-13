@@ -26,21 +26,19 @@
 <nav>
     <ul>
         <li *ngFor="let lien of liens; let i = index">
-            <a 
-                [routerLink]="lien.url"
-                (click)="toggleVisible(i)"
-                routerLinkActive="activeRoute"
-                [ngClass]="{master: lien.children}"
-            >
+            <span *ngIf="lien.children" (click)="toggleVisible(i)" style="cursor: pointer;">
+                <span *ngIf="!lien.isVisible; else elseblock">⮞</span>
+                <ng-template #elseblock>⮟</ng-template>
+            </span>
+            
+            <a [routerLink]="lien.url" (click)="toggleVisible(i)" routerLinkActive="activeRoute"
+                [ngClass]="{master: lien.children}">
                 {{ lien.title }}
             </a>
 
             <ul *ngIf="lien.children && lien.isVisible">
                 <li *ngFor="let enfant of lien.children; let i = index">
-                    <a 
-                        [routerLink]="enfant.url"
-                        routerLinkActive="activeRoute"
-                    >
+                    <a [routerLink]="enfant.url" routerLinkActive="activeRoute">
                         {{ i + 1 }} - {{ enfant.title }}
                     </a>
                 </li>
